@@ -1,0 +1,20 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 128rem;
+  padding-top: 1.2em;
+  margin-inline: auto;
+
+  .nav {
+    &__list {
+      display: flex;
+      list-style: none;
+      
+      > span {
+        font-weight: 900;
+        margin-inline: 1.6rem;
+      }
+    }
+  }
+}

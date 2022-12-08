@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: beige;
+  font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Elsie Swash Caps', cursive;
+}
+
+p, span, li, button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
