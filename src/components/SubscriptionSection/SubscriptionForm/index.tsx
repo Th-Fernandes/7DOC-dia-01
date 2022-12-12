@@ -1,6 +1,6 @@
 import { FormEvent } from "react";
 import emailIcon from "../../../assets/mail.svg"
-import styles from "./SubscriptionForm.module.scss";
+import { StyledSubscriptionForm } from "./styled";
 
 export function SubscriptionForm() {
   function handleSubscribeUserOnNewsLetter(event:FormEvent<HTMLFormElement>) {
@@ -8,8 +8,8 @@ export function SubscriptionForm() {
   }
   
   return (
-    <div className={styles.container}>
-      <div className={styles.presentation}>
+    <StyledSubscriptionForm.Container>
+      <StyledSubscriptionForm.Presentation>
         <p>Sua casa com as</p>
         <h2>Melhores plantas</h2>
         <p>
@@ -17,17 +17,19 @@ export function SubscriptionForm() {
           sua casa e torná-lo uma pessoa mais feliz no seu dia a dia.
           Entre com seu e-mail e assine nossa newsletter para saber das novidades da marca.
         </p>
-      </div>
+      </StyledSubscriptionForm.Presentation>
 
-      <form onSubmit={event => handleSubscribeUserOnNewsLetter(event)} className={styles.subscription}>
-        <div className={styles.inputContainer}>
+      <StyledSubscriptionForm.Form 
+        onSubmit={event => handleSubscribeUserOnNewsLetter(event)} 
+      >
+        <div className="inputContainer">
           <label htmlFor="userEmail">
             <img src={emailIcon} alt="email icon" />
           </label>
           <input type="email" id="userEmail" placeholder="insira seu email" />
         </div>
         <button type="submit">Assinar newsLetter</button>
-      </form>
-    </div>
+      </StyledSubscriptionForm.Form>
+    </StyledSubscriptionForm.Container>
   )
 }

@@ -1,14 +1,14 @@
 import { Menu } from "./Menu";
+import { StyledSubscriptionSection } from "./styled";
 import { SubscriptionForm } from "./SubscriptionForm";
-import styles from "./SubscriptionSection.module.scss"
 
 export function SubscriptionSection() {
   return (
-    <section className={styles.section}>
-      <div className={styles.section__content}>
-      <Menu />
-      <SubscriptionForm />
-      </div>
-    </section>
+    <StyledSubscriptionSection.Container>
+      <StyledSubscriptionSection.Content>
+        <Menu />
+        <SubscriptionForm />
+      </StyledSubscriptionSection.Content>
+    </StyledSubscriptionSection.Container>
   )
 }

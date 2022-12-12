@@ -1,4 +1,4 @@
-import styles from "./Menu.module.scss"
+import { StyledMenu } from "./styled"
 
 export function Menu() {
   const navItems = [
@@ -10,13 +10,13 @@ export function Menu() {
   ]
 
   return (
-    <header className={styles.menu}>
+    <StyledMenu.Container>
       <h1>
         <img src="/logo-full.svg" alt="" />
       </h1>
 
-      <nav className={styles.nav}>
-        <ul className={styles.nav__list}>
+      <StyledMenu.Nav>
+        <ul className="list">
           {
             navItems.map((navItem, index) => {
               if(navItems.length  === index + 1) return <li><a href="">{navItem}</a></li>
@@ -29,7 +29,7 @@ export function Menu() {
             })
           }
         </ul>
-      </nav>
-    </header>
+      </StyledMenu.Nav>
+    </StyledMenu.Container>
   )
 }

@@ -1,9 +1,12 @@
-.container {
+import styled from "styled-components";
+
+const Container = styled.div`
   max-width: 58.5rem;
   margin-top: 15rem;
+`
 
-  .presentation {
-    > h2 {
+const Presentation = styled.div`
+  > h2 {
       font-size: 8.2rem;
       margin-block: 1.2rem 2.4rem; 
     }
@@ -12,9 +15,9 @@
       color: #202020;
       line-height: 2.6rem;
     }
-  }
+`
 
-  .subscription {
+const Form = styled.form`
     display: flex;
     height: 7.5rem;
     margin-top: 3.7rem;
@@ -55,5 +58,10 @@
       border: none;
       cursor: pointer;
     }
-  }
+`
+
+export const StyledSubscriptionForm = {
+  Container,
+  Presentation,
+  Form
 }
